@@ -12,9 +12,6 @@ pool:
 variables:
   GOBIN:  '$(GOPATH)/bin' # Go binaries path
   GOROOT: '$(Agent.BuildDirectory)/Go' # Go installation path
-- task: GoTool@0
-  inputs:
-    version: '1.10'
   GOPATH: '$(Agent.BuildDirectory)/gopath' # Go workspace path
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
 
